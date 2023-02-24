@@ -1,0 +1,11 @@
+.Home{
+    background-color: red;
+    position: absolute;
+    width: 30%;
+    height: 100vh;
+}
+
+.Menu-initGame{
+    background-color: orange;
+    margin-top: 200px;
+}
