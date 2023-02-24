@@ -1,0 +1,11 @@
+:root{
+    --color-border: white
+}
+
+.Rules{
+    font-family: 'Well Bred', sans-serif;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid var(--color-border);
+}

@@ -1,11 +1,68 @@
+@import url('https://fonts.cdnfonts.com/css/well-bred');
+
+:root{
+    --primary-color-home: #150606; 
+    --secondary-color-home: white;
+    --color-botom-focus: black;
+}
+
+.containerHome{
+    padding: 0px;
+}
+
 .Home{
-    background-color: red;
+    font-family: 'Well Bred', sans-serif;
+    background-color: var(--primary-color-home);
     position: absolute;
-    width: 30%;
     height: 100vh;
+    border-right: 2px solid var(--secondary-color-home);
 }
 
 .Menu-initGame{
-    background-color: orange;
+    position: absolute;
     margin-top: 200px;
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: var(--secondary-color-home);
+}
+
+.title{
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: var(--secondary-color-home);
+    border-bottom: 1px solid var(--secondary-color-home);
+}
+
+.username, .game{
+    margin-bottom: 10px;
+}
+
+.username{
+    background-color: transparent;
+    color: var(--secondary-color-home);
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: var(--secondary-color-home);
+    text-align: center;
+    outline: 0px;
+}
+
+.game{
+    background-color: transparent;
+    border: 1px solid var(--secondary-color-home);
+    padding: 5px;
+    color: var(--secondary-color-home);
+    border-radius: 3px;
+}
+
+.game:hover{
+    background-color: var(--secondary-color-home);
+    color: black;
+    border: 1px solid black;
+}
+
+.Rules-home{
+    position: absolute;
+    margin-top: 100px;
 }
