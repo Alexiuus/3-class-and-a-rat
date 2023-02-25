@@ -16,6 +16,7 @@
     position: absolute;
     height: 100vh;
     border-right: 2px solid var(--secondary-color-home);
+    animation: init-move-home 1s 1;
 }
 
 .Menu-initGame{
@@ -65,6 +66,8 @@
 .Rules-home{
     position: absolute;
     margin-top: 100px;
+    animation: init-move-rules 2s 1;
+    z-index: -1;
 }
 
 .error{
@@ -74,4 +77,25 @@
     padding: 5px;
     border: 1px solid white;
     margin-bottom: 10px;
+}
+
+@keyframes init-move-home{
+    0%{
+        left: -500px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+@keyframes init-move-rules{
+    0%{
+        left: -1500px;
+    }
+    50%{
+        left: -900px;
+    }
+    100%{
+        left: 0px;
+    }
 }
