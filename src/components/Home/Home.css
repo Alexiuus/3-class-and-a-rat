@@ -66,3 +66,12 @@
     position: absolute;
     margin-top: 100px;
 }
+
+.error{
+    background-color: #9909094b;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    border: 1px solid white;
+    margin-bottom: 10px;
+}
