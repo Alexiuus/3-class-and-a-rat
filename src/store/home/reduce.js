@@ -1,12 +1,12 @@
-import createHome from "../../services/Home/home";
+import createGame from "../../config/Home/gameService";
 
 const defaultDataUser = {
     "username": ""
 };
 
 const verifyUsername = ({attribute, username, state, dataUser}) => {
-    if(username === '') state({state: 'ERROR', error: 'empty name'});
-    else state({ state: 'OK',  error: ''});
+    if(username === '') state({state: 'ERROR', info: 'empty name'});
+    else state({ state: 'OK',  info: ''});
 
     return {
         ...dataUser,
@@ -23,7 +23,7 @@ function reducer(dataUser = defaultDataUser, action){
                 dataUser: dataUser
             });
     } else if(action.type === 'CREATE_GAME') {
-        createHome(dataUser, action.state);
+        createGame(dataUser, action.state);
     }
 
     return dataUser;

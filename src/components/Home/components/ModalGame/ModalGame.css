@@ -1,0 +1,21 @@
+:root{
+    --background-color-waitMenu: rgb(71, 21, 21);
+}
+
+.waitMenu{
+    background-color: var(--background-color-waitMenu);
+    border-radius: 5px;
+    color: white;
+    font-family: 'Well Bred', sans-serif;
+    border: 1px solid rgb(255, 168, 168);
+}
+
+.ModalTitle{
+    text-align: center;
+}
+
+.itemInfo{
+    background-color: rgba(10, 2, 2, 0.394);
+    border-radius: 3px;
+    padding: 0px 3px 0px 3px;
+}
