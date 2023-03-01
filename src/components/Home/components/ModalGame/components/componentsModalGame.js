@@ -1,6 +1,6 @@
 function ListInfoUser({username, link}){
     return (
-      <div>
+      <div className="ListInfoUser">
         <ul>
           <li>Username: <span className='itemInfo'>{username}</span></li>
           <li>link (Share this link to your friends): <span className='itemInfo'>{link}</span></li>
@@ -9,17 +9,15 @@ function ListInfoUser({username, link}){
     )
   }
   
-  function ItemUser(item){
-    return <li>username: <span className='itemInfo'>{item.username}</span></li>;
-  }
-  
   function ListUsersGame({listUsers}){
-    const itemsList = <ul>{listUsers.map((item, i) => <ItemUser item={item}/>)}</ul>;
     return (
-      <div>
-        { 
-          (listUsers.length > 0)? {itemsList} : <p>Loading...</p> 
-        }
+      <div className="ListUserGame">
+        <ul>{
+          (listUsers.length > 0)? 
+            listUsers.map((item, i) => <li key={i}>username: <span className='itemInfo' key={i}>{item}</span></li>)
+          : 
+            <p>Loading...</p>
+        }</ul>
       </div>
     )
   }

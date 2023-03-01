@@ -12,11 +12,16 @@ function Error({error}){
 
 function Home({ SetUsername, SendAndCreateGame }) {
   const [state, setState] = useState({ state: 'OK',  info: ''});
+  const [isSessionInit, setIsSessionInit] = useState(false);
   const cookies = new Cookies();
 
   const runGame = () => {
-    if (!state.info && state.info !== 'init') SendAndCreateGame(setState);
-    else setState({state: true, info: 'empty name'});
+    if (!state.info && state.info !== 'init') {
+      SendAndCreateGame(setState);
+      setIsSessionInit(true);
+    } else {
+      setState({state: true, info: 'empty name'});
+    }
   }
 
   return (
@@ -33,7 +38,7 @@ function Home({ SetUsername, SendAndCreateGame }) {
       </div>
       <div className="Rules-home offset-5 col-6"><Rules/></div>
       { 
-        (cookies.get('gameCreate'))? <ModalGame username={cookies.get('username')} link={cookies.get('linkGame')}/> : <></> 
+        (cookies.get('gameCreate') && isSessionInit)? <ModalGame cookies= {cookies} isSessionInit={setIsSessionInit}/> : <></> 
       }
     </div>
   );
