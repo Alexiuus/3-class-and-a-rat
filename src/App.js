@@ -1,3 +1,4 @@
+import JoinGame from './components/Home/components/joinGame/JoinGame';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import { Provider } from "react-redux"; 
@@ -10,6 +11,7 @@ function App() {
       <BrowserRouter store={store}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/:id_game" element={<JoinGame/>} />
         </Routes>
       </BrowserRouter>
     </Provider>
