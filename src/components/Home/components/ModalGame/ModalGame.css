@@ -1,0 +1,30 @@
+:root{
+    --background-color-waitMenu: rgb(71, 21, 21);
+    --background-color-waitMenu-secondary: rgba(10, 2, 2, 0.471);
+    --background-color-info: rgba(0, 0, 0, 0.692);
+    --font-color: white;
+    --color-border-waitMenu: rgb(255, 168, 168);
+}
+
+.waitMenu{
+    background-color: var(--background-color-waitMenu);
+    border-radius: 5px;
+    color: var(--font-color);
+    font-family: 'Well Bred', sans-serif;
+    border: 1px solid var(--color-border-waitMenu)
+}
+
+.ModalTitle{
+    text-align: center;
+}
+
+.itemInfo{
+    background-color: var(--background-color-info);
+    border-radius: 3px;
+    padding: 0px 3px 0px 3px;
+}
+
+.ListUserGame, .ListInfoUser{
+    background-color: var(--background-color-waitMenu-secondary);
+    border-radius: 3px;
+}
